@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+/*# sourceMappingURL=style.scss.map */
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: block;
+  font-family: "lucida fax" sans-serif;
+  text-align: center;
+}
+
+header {
+  padding: 100px;
+  background-image: radial-gradient(circle, rgba(59, 0, 147, 0.5), rgba(42, 42, 114, 0.7)), url(assets/two.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #92D14F;
+  position: relative;
+}
+
+h1 {
+  font-family: "lato";
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: "lucida fax";
+  color: #ffffff;
+  text-align: right;
+  font-size: 1em;
+  margin-right: 1.7em;
+}
+
+div {
+  padding-bottom: 50px;
+}
+
+h3 {
+  font-family: "lato";
+  margin: 20px;
+}
+
+#zen-resources ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 20px;
+  justify-content: center;
+  list-style: none;
+}
+
+/*# sourceMappingURL=style.css.map */
