@@ -136,12 +136,9 @@ p{
     top: 920px;
   }
   ul {
-    list-style: none;;
+    list-style: none;
   }
-  p a:link::after:last-child{
-    color: $white;
-  }
-
+ 
 @media only screen and (min-width:64em) {
     body {
       display:grid;
