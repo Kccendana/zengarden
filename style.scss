@@ -5,10 +5,7 @@ $lato: "lato";
 /*# sourceMappingURL=style.scss.map */
 //variable
 //color
-$purple: #3B0093;
-$green: #92D14F;
-$white: #ffffff;
-$black: #000000;
+@import 'partials/colors'; 
 
 
 //mixins
