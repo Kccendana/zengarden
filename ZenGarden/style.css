@@ -1,194 +1,318 @@
-/* css Zen Garden default style v1.02 */
-/* css released under Creative Commons License - http://creativecommons.org/licenses/by-nc-sa/1.0/  */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+.zen-validate-html::before, .zen-accessibility::before, .zen-license::before, .zen-validate-css::before, .zen-github::before {
+  content: '';
+  display: block;
+  width: 3em;
+  height: 3em;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-background-size: contain; }
 
-/* This file based on 'Tranquille' by Dave Shea */
-/* You may use this file as a foundation for any new work, but you may find it easier to start from scratch. */
-/* Not all elements are defined in this file, so you'll most likely want to refer to the xhtml as well. */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
 
-/* Your images should be linked as if the CSS file sits in the same folder as the images. ie. no paths. */
+body {
+  font-family: "lucida fax", sans-serif;
+  text-align: center;
+  min-width: 425px;
+  margin: 0 auto;
+  max-width: 1024px; }
 
+.page-wrapper {
+  display: block;
+  position: relative; }
 
-/* basic elements */
-html {
-	margin: 0;
-	padding: 0;
-	}
-body { 
-	font: 75% georgia, sans-serif;
-	line-height: 1.88889;
-	color: #555753; 
-	background: #fff url(http://csszengarden.com/001/blossoms.jpg) no-repeat bottom right; 
-	margin: 0; 
-	padding: 0;
-	}
-p { 
-	margin-top: 0; 
-	text-align: justify;
-	}
-h3 { 
-	font: italic normal 1.4em georgia, sans-serif;
-	letter-spacing: 1px; 
-	margin-bottom: 0; 
-	color: #7D775C;
-	}
-a:link { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #B7A5DF;
-	}
-a:visited { 
-	font-weight: bold; 
-	text-decoration: none; 
-	color: #D4CDDC;
-	}
-a:hover, a:focus, a:active { 
-	text-decoration: underline; 
-	color: #9685BA;
-	}
-abbr {
-	border-bottom: none;
-	}
-
-
-/* specific divs */
-.page-wrapper { 
-	background: url(http://csszengarden.com/001/zen-bg.jpg) no-repeat top left; 
-	padding: 0 175px 0 110px;  
-	margin: 0; 
-	position: relative;
-	}
-
-.intro { 
-	min-width: 470px;
-	width: 100%;
-	}
-
-header h1 { 
-	background: transparent url(http://csszengarden.com/001/h1.gif) no-repeat top left;
-	margin-top: 10px;
-	display: block;
-	width: 219px;
-	height: 87px;
-	float: left;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-header h2 { 
-	background: transparent url(http://csszengarden.com/001/h2.gif) no-repeat top left; 
-	margin-top: 58px; 
-	margin-bottom: 40px; 
-	width: 200px; 
-	height: 18px; 
-	float: right;
-
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
 header {
-	padding-top: 20px;
-	height: 87px;
-}
+  width: 100%;
+  height: 20vh;
+  background-image: radial-gradient(rgba(76, 15, 169, 0.66), rgba(127, 10, 233, 0.7)), url(assets/two.jpg);
+  background-position: center;
+  background-size: cover;
+  color: #92D14F;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  header h1 {
+    font-family: "lato";
+    font-size: 2.5em;
+    margin-right: -1em;
+    color: #92D14F; }
+    header h1::before {
+      display: inline-block;
+      position: absolute;
+      content: "";
+      width: 170px;
+      height: 170px;
+      background: url(assets/logo.png);
+      background-repeat: no-repeat;
+      background-size: 100%;
+      transform: rotate(80deg);
+      top: 2.7em;
+      left: 40px; }
+      @media (min-width: 64em) {
+        header h1::before {
+          left: 8.5em; } }
+  header h2 {
+    font-size: 1.1em;
+    margin-right: -6em;
+    font-style: italic;
+    color: white; }
 
 .summary {
-	clear: both; 
-	margin: 20px 20px 20px 10px; 
-	width: 160px; 
-	float: left;
-	}
-.summary p {
-	font: italic 1.1em/2.2 georgia; 
-	text-align: center;
-	}
+  background: #92D14F;
+  padding: 2em 1em;
+  font-style: italic; }
+  .summary p a {
+    text-transform: uppercase;
+    color: black; }
+  .summary p:nth-child(2) {
+    margin-top: 10px; }
 
 .preamble {
-	clear: right; 
-	padding: 0px 10px 0 10px;
-	}
-.supporting {	
-	padding-left: 10px; 
-	margin-bottom: 40px;
-	}
+  background-image: radial-gradient(rgba(76, 15, 169, 0.66), rgba(127, 10, 233, 0.7)), url(assets/two.jpg);
+  background-position: center;
+  background-size: cover;
+  padding: 2em 3em 3em 3em;
+  color: white;
+  justify-content: center; }
+  @media (min-width: 64em) {
+    .preamble {
+      width: 65%;
+      margin-top: 50px; } }
+  .preamble h3 {
+    margin: 1em;
+    color: #92D14F; }
+  .preamble p {
+    margin-top: 1em; }
 
-footer { 
-	text-align: center; 
-	}
-footer a:link, footer a:visited { 
-	margin-right: 20px; 
-	}
+.main .explanation {
+  padding: 2em 3em 3em 3em;
+  color: white;
+  justify-content: center;
+  background: #33007f; }
+  @media (min-width: 64em) {
+    .main .explanation {
+      width: 65%;
+      margin-bottom: 50px; } }
+  .main .explanation h3 {
+    margin: 1em; }
+  .main .explanation p {
+    margin-top: 1em; }
+
+h2, h3, h4 {
+  font-family: "lato"; }
+
+h3 {
+  font-size: 1.5em; }
+
+.participation, .benefits, .requirements {
+  background: #92D14F; }
+  @media (min-width: 64em) {
+    .participation, .benefits, .requirements {
+      opacity: 90%;
+      left: 35%;
+      width: 65%;
+      position: relative; } }
+  .participation h3, .benefits h3, .requirements h3 {
+    color: #3B0093;
+    margin-bottom: 1em;
+    padding-top: 1em; }
+  .participation p, .benefits p, .requirements p {
+    color: black;
+    margin-top: 1em;
+    padding: 1em 1.5em; }
+  .participation p a, .benefits p a, .requirements p a {
+    color: black;
+    font-style: italic; }
+
+p[role=contentinfo] {
+  background-image: radial-gradient(rgba(76, 15, 169, 0.66), rgba(127, 10, 233, 0.7)), url(assets/two.jpg);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  color: white;
+  font-size: 1.1em;
+  position: relative;
+  top: 840px;
+  padding-top: 10px;
+  padding: 2em;
+  z-index: 3; }
+  @media (min-width: 64em) {
+    p[role=contentinfo] {
+      width: 1065px;
+      opacity: 90%;
+      left: 30%;
+      height: 8em;
+      top: 140px;
+      margin-left: -600px; } }
+  p[role=contentinfo] a {
+    color: white; }
 
 .sidebar {
-	margin-left: 600px; 
-	position: absolute; 
-	top: 0; 
-	right: 0;
-	}
-.sidebar .wrapper { 
-	font: 10px verdana, sans-serif; 
-	background: transparent url(http://csszengarden.com/001/paper-bg.jpg) top left repeat-y; 
-	padding: 10px; 
-	margin-top: 150px; 
-	width: 130px; 
-	}
-.sidebar h3.select { 
-	background: transparent url(http://csszengarden.com/001/h3.gif) no-repeat top left; 
-	margin: 10px 0 5px 0; 
-	width: 97px; 
-	height: 16px; 
+  background-image: url(assets/one.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
+  padding: 3em 0;
+  margin-top: -10em;
+  z-index: 1;
+  position: relative;
+  top: 480px; }
+  @media (min-width: 64em) {
+    .sidebar {
+      height: 124vh;
+      top: -2940px;
+      z-index: -1; } }
+  .sidebar a {
+    color: #3B0093; }
+  @media (min-width: 64em) {
+    .sidebar .design-selection {
+      position: absolute;
+      right: 10px;
+      top: 90px;
+      padding: 10px;
+      text-align: left; } }
+  .sidebar .design-selection li {
+    margin-top: .4em; }
+    @media (min-width: 64em) {
+      .sidebar .design-selection li {
+        margin-top: .9em;
+        font-size: 1.1em; } }
+    .sidebar .design-selection li a.design-name {
+      font-size: 1em;
+      display: block; }
+      @media (min-width: 64em) {
+        .sidebar .design-selection li a.design-name {
+          font-size: 1.5em; } }
+  .sidebar .select, .sidebar .archives {
+    display: none; }
+  .sidebar .viewall a {
+    color: #92D14F;
+    font-family: "lato";
+    font-size: 1.3em;
+    font-weight: 600;
+    text-decoration: none;
+    position: absolute;
+    left: 165px;
+    top: 14px;
+    z-index: 4; }
+    @media (min-width: 64em) {
+      .sidebar .viewall a {
+        font-size: 2.3em;
+        top: 43px;
+        left: 695px; } }
+  .sidebar li.next {
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-top: .5em; }
+    .sidebar li.next a {
+      text-decoration: none; }
+      @media (min-width: 64em) {
+        .sidebar li.next a {
+          font-size: 1.8em;
+          position: absolute;
+          top: 732px;
+          right: 50px; } }
+  .sidebar .zen-resources {
+    border: 1px solid gray;
+    width: 50%;
+    margin: 1em auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: .5em;
+    position: absolute;
+    top: 430px;
+    left: 120px;
+    background: rgba(235, 235, 235, 0.5); }
+    @media (min-width: 64em) {
+      .sidebar .zen-resources {
+        width: 30%;
+        height: 450px;
+        left: 30px;
+        top: 850px; } }
+    .sidebar .zen-resources h3 {
+      color: #92D14F;
+      margin: .2em .5em;
+      border-bottom: 1px solid gray;
+      padding: 10px; }
+      @media (min-width: 64em) {
+        .sidebar .zen-resources h3 {
+          font-size: 2em; } }
+    .sidebar .zen-resources ul {
+      margin-bottom: 3em; }
+    .sidebar .zen-resources ul li {
+      margin-top: 0.5em; }
+      @media (min-width: 64em) {
+        .sidebar .zen-resources ul li {
+          font-size: 1.5em; } }
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.archives { 
-	background: transparent url(http://csszengarden.com/001/h5.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:57px; 
-	height: 14px; 
+.zen-validate-html::before {
+  background-image: url("data:image/svg+xml,%3Csvg class='svg-icon' style='width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M116.7 63.8l71.9 806.9 322.8 89.6 323.7-89.8 72.1-806.7H116.7z m634 263.9H372l9 101.3h360.7l-27.2 303.8-203 56.3-202.7-56.3-13.9-155.4h99.4l7.1 79 110.2 29.7 0.3-0.1L622 656.3 633.5 528h-343l-26.7-299.2h495.7l-8.8 98.9z' fill='%233B0093' /%3E%3C/svg%3E"); }
+  @media (min-width: 64em) {
+    .zen-validate-html::before {
+      width: 8em;
+      height: 8em; } }
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
-.sidebar h3.resources { 
-	background: transparent url(http://csszengarden.com/001/h6.gif) no-repeat top left; 
-	margin: 25px 0 5px 0; 
-	width:63px; 
-	height: 10px; 
+.zen-github,
+.zen-license,
+.zen-validate-css,
+.zen-accessibility,
+.zen-validate-html {
+  color: transparent; }
 
-	text-indent: 100%;
-	white-space: nowrap;
-	overflow: hidden;
-	}
+.zen-accessibility::before {
+  background-image: url("data:image/svg+xml,%3Csvg class='svg-icon' style='width: 1em; height: 1em;vertical-align: middle;fill: %233B0093;overflow: hidden;' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M785.066667 477.866667 610.133333 486.4 708.266667 375.466667C716.8 362.666667 721.066667 341.333333 716.8 320 712.533333 307.2 708.266667 294.4 695.466667 285.866667L465.066667 149.333333C448 136.533333 422.4 140.8 405.333333 153.6L290.133333 260.266667C268.8 281.6 264.533333 311.466667 285.866667 332.8 302.933333 354.133333 337.066667 354.133333 358.4 337.066667L443.733333 260.266667 524.8 307.2 345.6 490.666667C341.333333 494.933333 341.333333 499.2 337.066667 499.2 315.733333 507.733333 294.4 516.266667 277.333333 529.066667L341.333333 593.066667C362.666667 584.533333 384 576 405.333333 576 486.4 576 554.666667 644.266667 554.666667 725.333333 554.666667 750.933333 550.4 772.266667 537.6 789.333333L601.6 853.333333C627.2 814.933333 640 772.266667 640 725.333333 640 674.133333 622.933333 622.933333 593.066667 584.533333L733.866667 571.733333 725.333333 776.533333C721.066667 806.4 742.4 827.733333 772.266667 832L776.533333 832C802.133333 832 823.466667 810.666667 827.733333 785.066667L836.266667 533.333333C836.266667 520.533333 832 503.466667 823.466667 494.933333 810.666667 482.133333 797.866667 477.866667 785.066667 477.866667M768 234.666667C814.933333 234.666667 853.333333 196.266667 853.333333 149.333333 853.333333 102.4 814.933333 64 768 64 721.066667 64 682.666667 102.4 682.666667 149.333333 682.666667 196.266667 721.066667 234.666667 768 234.666667M533.333333 921.6C494.933333 947.2 452.266667 960 405.333333 960 277.333333 960 170.666667 853.333333 170.666667 725.333333 170.666667 678.4 183.466667 635.733333 209.066667 597.333333L273.066667 661.333333C264.533333 682.666667 256 704 256 725.333333 256 806.4 324.266667 874.666667 405.333333 874.666667 430.933333 874.666667 452.266667 870.4 469.333333 857.6L533.333333 921.6Z' /%3E%3C/svg%3E");
+  width: 5em; }
+  @media (min-width: 64em) {
+    .zen-accessibility::before {
+      width: 8em;
+      height: 8em; } }
 
+.zen-license::before {
+  background-image: url("data:image/svg+xml,%3Csvg class='svg-icon' style='width: 1em; height: 1em;vertical-align: middle;fill:%233B0093;overflow: hidden;' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M345.714286 704.571429q87.428571 0 146.857143-59.428572 8-10.285714 1.714285-20.571428l-25.714285-46.857143q-3.428571-7.428571-13.714286-9.714286-9.142857-1.142857-15.428572 6.285714l-2.285714 1.714286q-2.285714 2.285714-6.571428 5.714286t-10 7.428571-13.428572 8.285714T390.857143 605.142857t-19.142857 5.428572-21.428572 2q-43.428571 0-71.428571-28.571429t-28-72.571429q0-43.428571 27.428571-71.714285T348 411.428571q21.142857 0 40.857143 8t28.857143 16l9.142857 8q6.285714 6.285714 14.857143 5.714286 9.142857-1.142857 13.714285-8l30.285715-44.571428q7.428571-11.428571-1.142857-22.285715-1.714286-2.285714-6.285715-6.857143t-17.142857-13.428571-27.714286-16T394.857143 325.142857t-49.142857-5.714286q-84.571429 0-140.571429 55.142858T149.142857 512q0 83.428571 55.428572 138t141.142857 54.571429z m360 0q87.428571 0 146.857143-59.428572 8-10.285714 2.285714-20.571428l-25.714286-46.857143q-4.571429-8-14.285714-9.714286-9.142857-1.142857-15.428572 6.285714l-2.285714 1.714286q-2.285714 2.285714-6.571428 5.714286t-10 7.428571-13.428572 8.285714-16.285714 7.714286-19.142857 5.428572-21.428572 2q-43.428571 0-71.428571-28.571429t-28-72.571429q0-43.428571 27.428571-71.714285t69.714286-28.285715q21.142857 0 40.857143 8t28.857143 16l9.142857 8q6.285714 6.285714 14.857143 5.714286 9.142857-1.142857 13.714285-8l30.285715-44.571428q7.428571-11.428571-1.142857-22.285715-1.714286-2.285714-6.285715-6.857143t-17.142857-13.428571-27.714286-16T754.857143 325.142857t-49.142857-5.714286q-84 0-140.285715 55.142858T509.142857 512q0 83.428571 55.428572 138t141.142857 54.571429zM512 91.428571q-85.714286 0-163.428571 33.428572t-134 89.714286-89.714286 134T91.428571 512t33.428572 163.428571 89.714286 134 134 89.714286 163.428571 33.428572 163.428571-33.428572 134-89.714286 89.714286-134 33.428572-163.428571-33.428572-163.428571-89.714286-134-134-89.714286T512 91.428571z m0-91.428571q104 0 198.857143 40.571429t163.428571 109.142857 109.142857 163.428571 40.571429 198.857143-40.571429 198.857143-109.142857 163.428571-163.428571 109.142857-198.857143 40.571429-198.857143-40.571429-163.428571-109.142857-109.142857-163.428571T0 512t40.571429-198.857143 109.142857-163.428571T313.142857 40.571429 512 0z' /%3E%3C/svg%3E"); }
+  @media (min-width: 64em) {
+    .zen-license::before {
+      width: 8em;
+      height: 8em; } }
 
-.sidebar ul {
-	margin: 0;
-	padding: 0;
-	}
-.sidebar li {
-	line-height: 1.3em; 
-	background: transparent url(http://csszengarden.com/001/cr1.gif) no-repeat top center; 
-	display: block; 
-	padding-top: 5px; 
-	margin-bottom: 5px;
-	list-style-type: none;
-	}
-.sidebar li a:link {
-	color: #988F5E;
-	}
-.sidebar li a:visited {
-	color: #B3AE94;
-	}
+.zen-validate-css::before {
+  background-image: url("data:image/svg+xml,%3Csvg class='svg-icon' style='width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M512 512zM128.3 64.3l69.8 805.8 313.4 89.5L825.8 870l69.9-805.7H128.3z m580.9 669.3l-197.1 56.2-196.8-56.5L301.9 578h96.4l6.9 79.1 107.1 30.3 0.3 0.5h0.1l106.9-29.7L630.7 530H406.1l-8-99.9h241.1l8.8-101.9H280.2l-8-97.9H753l-43.8 503.3z' fill='%233B0093' /%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg class='svg-icon' style='width: 1em; height: 1em;vertical-align: middle;fill: currentColor;overflow: hidden;' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M512 512zM128.3 64.3l69.8 805.8 313.4 89.5L825.8 870l69.9-805.7H128.3z m580.9 669.3l-197.1 56.2-196.8-56.5L301.9 578h96.4l6.9 79.1 107.1 30.3 0.3 0.5h0.1l106.9-29.7L630.7 530H406.1l-8-99.9h241.1l8.8-101.9H280.2l-8-97.9H753l-43.8 503.3z' fill='%233B0093' /%3E%3C/svg%3E"); }
+  @media (min-width: 64em) {
+    .zen-validate-css::before {
+      width: 8em;
+      height: 8em; } }
 
+.zen-github::before {
+  background-image: url("data:image/svg+xml,%3Csvg class='svg-icon' style='width: 1em; height: 1em;vertical-align: middle;fill: %233B0093;overflow: hidden;' viewBox='0 0 1024 1024' version='1.1' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M512 42.666667A464.64 464.64 0 0 0 42.666667 502.186667 460.373333 460.373333 0 0 0 363.52 938.666667c23.466667 4.266667 32-9.813333 32-22.186667v-78.08c-130.56 27.733333-158.293333-61.44-158.293333-61.44a122.026667 122.026667 0 0 0-52.053334-67.413333c-42.666667-28.16 3.413333-27.733333 3.413334-27.733334a98.56 98.56 0 0 1 71.68 47.36 101.12 101.12 0 0 0 136.533333 37.973334 99.413333 99.413333 0 0 1 29.866667-61.44c-104.106667-11.52-213.333333-50.773333-213.333334-226.986667a177.066667 177.066667 0 0 1 47.36-124.16 161.28 161.28 0 0 1 4.693334-121.173333s39.68-12.373333 128 46.933333a455.68 455.68 0 0 1 234.666666 0c89.6-59.306667 128-46.933333 128-46.933333a161.28 161.28 0 0 1 4.693334 121.173333A177.066667 177.066667 0 0 1 810.666667 477.866667c0 176.64-110.08 215.466667-213.333334 226.986666a106.666667 106.666667 0 0 1 32 85.333334v125.866666c0 14.933333 8.533333 26.88 32 22.186667A460.8 460.8 0 0 0 981.333333 502.186667 464.64 464.64 0 0 0 512 42.666667' /%3E%3C/svg%3E"); }
+  @media (min-width: 64em) {
+    .zen-github::before {
+      width: 8em;
+      height: 8em; } }
 
-.extra1 {
-	background: transparent url(http://csszengarden.com/001/cr2.gif) top left no-repeat; 
-	position: absolute; 
-	top: 40px; 
-	right: 0; 
-	width: 148px; 
-	height: 110px;
-	}
+footer {
+  display: flex;
+  column-gap: 5px;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  position: relative;
+  top: 650px;
+  z-index: 2; }
+  @media (min-width: 64em) {
+    footer {
+      top: -800px;
+      flex-direction: column;
+      left: -350px; } }
+
+ul li {
+  list-style: none; }
+
+/*# sourceMappingURL=style.css.map */
